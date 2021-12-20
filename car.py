@@ -4,6 +4,7 @@ import utils
 HEIGHT = 600
 WIDTH = 800
 CAR_BOUND_XCOR = WIDTH / 2 - 20
+SPEED = 10
 
 
 class Car(Turtle):
@@ -12,6 +13,7 @@ class Car(Turtle):
         self.penup()
         self.speed(0)
         self.shape("square")
+        self.shapesize(stretch_wid=1, stretch_len=2)
         self.color(utils.random_color())
         self.setup()
 
@@ -26,9 +28,9 @@ class Car(Turtle):
 
     def move(self):
         if self.heading() == 180 and self.xcor() > -CAR_BOUND_XCOR:
-            self.forward(10)
+            self.forward(SPEED)
         elif self.heading() == 0 and self.xcor() < CAR_BOUND_XCOR:
-            self.forward(10)
+            self.forward(SPEED)
         else:
             self.restart()
 

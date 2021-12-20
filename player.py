@@ -2,6 +2,7 @@ from turtle import Turtle
 
 HEIGHT = 600
 WIDTH = 800
+SPEED = 20
 
 PLAYER_BOUND_YCOR = HEIGHT / 2 - 20
 
@@ -18,7 +19,7 @@ class Player(Turtle):
 
     def move(self):
         if self.ycor() < PLAYER_BOUND_YCOR:
-            self.forward(20)
+            self.forward(SPEED)
         else:
             self.restart()
 

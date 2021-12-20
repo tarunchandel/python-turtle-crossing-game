@@ -43,6 +43,4 @@ while game_on:
 
 level.game_over()
 
-# TODO 4: Create Lanes or add a background pic
-
 screen.exitonclick()
